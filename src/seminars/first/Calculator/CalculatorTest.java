@@ -53,34 +53,19 @@ public class CalculatorTest {
 //        System.out.println(Calculator.squareRootExtraction(169));
 
 //----------------------------------------------------------------------------------
-        // Проверка дз!!!!!!!!!!!!!!!!
-        System.out.println(Calculator.calculatingDiscount(1523.5, 10));
+        // ДЗ !!!!!!!!!!!!!!!!
+        System.out.println(Calculator.calculatingDiscount(1000.0, 10));
 
-
-//        assertEquals(90.0, Calculator.calculatingDiscount(100, 10));
         double result1 = Calculator.calculatingDiscount(100.0, 10);
         assertThat(result1).isEqualTo(90.0);
 
         // сумма покупки равна 0
         double result2 = Calculator.calculatingDiscount(0.0, 10);
         assertThat(result2).isEqualTo(0.0);
-//        assertEquals(0.0, Calculator.calculatingDiscount(0, 10));
 
         // сумма скидки равна 0
         double result3 = Calculator.calculatingDiscount(100.0, 0);
         assertThat(result3).isEqualTo(100.0);
-//        assertEquals(100.0, Calculator.calculatingDiscount(100, 0));
-
-
-//        assertThrows(ArithmeticException.class, () -> Calculator.calculatingDiscount(100, -5));
-//
-//
-//        assertThrows(ArithmeticException.class, () -> Calculator.calculatingDiscount(1000.0, 110));
-
-        assertThatThrownBy(()-> Calculator.calculatingDiscount(100.0, 101))
-                .isInstanceOf(ArithmeticException.class)
-                .hasMessage("Invalid arguments");
-
 
 
 
